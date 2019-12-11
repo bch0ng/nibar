@@ -1,4 +1,5 @@
-import styles from "./styles.jsx";
+import fontawesome from "./styles/fontawesome.jsx";
+import colors from "./styles/colors.jsx";
 
 const speed = type => {
   if (type < 1000) {
@@ -30,17 +31,22 @@ export const updateState = event => {
 };
 
 const render = ({ output }) => {
+  const downloadIcon = "";
+  const uploadIcon = "";
+
   if (typeof output === "undefined") return null;
   return (
-    <div>
-      <span style={output.kbin > 1000 ? { color: styles.colors.red } : null}>
-        􀄩 {output.mbin}
-        mb
+    <div style={ fontawesome }>
+      <span style={ (output.kbin > 1000)
+          ? { color: colors.colors.blue }
+          : null }>
+        {downloadIcon + " " + output.mbin}mb
       </span>
       &nbsp;&nbsp;
-      <span style={output.kbout > 1000 ? { color: styles.colors.red } : null}>
-        􀄨 {output.mbout}
-        mb
+      <span style={ (output.kbout > 1000)
+          ? { color: colors.colors.blue }
+          : null }>
+        {uploadIcon + " " + output.mbout}mb
       </span>
     </div>
   );

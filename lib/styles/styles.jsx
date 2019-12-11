@@ -4,7 +4,8 @@ export default {
     dim: "#6c6c6c",
     bg: "#1c1c1c",
     red: "#ff8700",
-    accent: "#5fafaf"
+    accent: "#5fafaf",
+    green: "#9dc183"
   },
   fontSize: "11px",
   lineHeight: "20px",

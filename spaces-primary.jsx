@@ -1,9 +1,10 @@
 import Desktop from "./lib/Desktop.jsx";
 import Error from "./lib/Error.jsx";
 import parse from "./lib/parse.jsx";
-import styles from "./lib/styles.jsx";
+import styles from "./lib/styles/styles.jsx";
 
 const style = {
+  margin: "15px",
   padding: "0 12px",
   display: "grid",
   gridAutoFlow: "column",
@@ -12,6 +13,7 @@ const style = {
   overflow: "hidden",
   left: "0px",
   top: "0px",
+  zIndex: "2",
   fontFamily: styles.fontFamily,
   lineHeight: styles.lineHeight,
   fontSize: styles.fontSize,
